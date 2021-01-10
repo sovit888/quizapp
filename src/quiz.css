@@ -1,0 +1,57 @@
+.answer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.answer-list {
+  outline: none;
+  margin: 10px 0px;
+  flex-basis: 48%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.answer-list > p {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.answer-list-tab {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.answer-list.selected {
+  background-color: red;
+  color: white;
+}
+.answer-list.correct {
+  background-color: green;
+  color: white;
+}
+.submit-quiz {
+  margin-top: 10px;
+  text-align: center;
+}
+.submit-quiz > button {
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  background-color: #047aed;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: white;
+  transition: 0.1s;
+}
+.submit-quiz > button:hover {
+  opacity: 0.9;
+}
+.submit-quiz > button:disabled {
+  opacity: 0.3;
+}
+@media screen and (max-width: 576px) {
+  .answer-list {
+    flex-basis: 96%;
+  }
+}

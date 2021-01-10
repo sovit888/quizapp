@@ -1,0 +1,6 @@
+.quiz-progress {
+  padding: 20px 20px;
+}
+.quiz-progress > p {
+  font-size: 30px;
+}
