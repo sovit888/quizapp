@@ -4,3 +4,21 @@
 .quiz-progress > p {
   font-size: 30px;
 }
+.btn-reset {
+  margin-top: 10px;
+  text-align: center;
+}
+.btn-reset > button {
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  background-color: #047aed;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: white;
+  transition: 0.1s;
+}
+.btn-reset > button:hover {
+  opacity: 0.9;
+}

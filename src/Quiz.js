@@ -1,7 +1,14 @@
 import React from 'react';
 import './quiz.css';
 
-const Quiz = ({ quiz: { question, answer, hints }, count, setCount }) => {
+const Quiz = ({
+  quiz: { question, answer, hints },
+  count,
+  setCount,
+  handleNext,
+  score,
+  setScore
+}) => {
   const [selected, setSelected] = React.useState(null);
   const [correct, setCorrect] = React.useState(-1);
   const [show, setShow] = React.useState(false);
@@ -21,11 +28,15 @@ const Quiz = ({ quiz: { question, answer, hints }, count, setCount }) => {
     setCorrect(correctIndex);
     setShow(true);
     setTimeout(() => {
+      if (correctIndex === selected) {
+        setScore(score + 1);
+      }
       setSelected(null);
       setShow(false);
       setCorrect(-1);
       setCount(count + 1);
-    }, 3000);
+      handleNext();
+    }, 2000);
   };
   return (
     <>
